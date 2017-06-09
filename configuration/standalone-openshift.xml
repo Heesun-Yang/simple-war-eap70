@@ -466,6 +466,7 @@
                 <!-- No HTTPS configuration discovered -->
                 <host name="default-host" alias="localhost">
                     <location name="/" handler="welcome-content"/>
+                    <access-log directory="${jboss.server.log.dir}/${HOSTNAME}" pattern="%a %t %H %p %U %s %S %T"/>
                     <filter-ref name="server-header"/>
                     <filter-ref name="x-powered-by-header"/>
                 </host>
