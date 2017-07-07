@@ -309,7 +309,9 @@
             </channels>
             <stacks>
                 <stack name="udp">
-                    <transport type="UDP" socket-binding="jgroups-udp"/>
+                    <transport type="UDP" socket-binding="jgroups-udp">
+                        <property name="oob_thread_pool.max_threads">1000</property>
+                    </transport>
                     <protocol type="openshift.KUBE_PING"/>
                     <protocol type="MERGE3"/>
                     <protocol type="FD_SOCK" socket-binding="jgroups-udp-fd"/>
