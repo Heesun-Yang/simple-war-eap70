@@ -310,7 +310,7 @@
             <stacks>
                 <stack name="udp">
                     <transport type="UDP" socket-binding="jgroups-udp">
-                        <property name="oob_thread_pool.max_threads">1000</property>
+                        <property name="oob_thread_pool.max_threads">10</property>
                     </transport>
                     <protocol type="openshift.KUBE_PING"/>
                     <protocol type="MERGE3"/>
